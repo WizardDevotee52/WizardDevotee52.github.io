@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Aliado en Regulación Sanitaria</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="Pagina.css">
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Tiny Slider CSS -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-white text-blue-600 shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-28">
+    <!-- IZQ: LOGO -->
+    <a href="#top" class="flex items-center" aria-label="Inicio">
+      <svg class="h-[110px] w-auto"
+           viewBox="65 60 270 180"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           aria-label="Logo Grupo Carvele">
+        <defs>
+          <linearGradient id="gradText" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2563eb"/>
+            <stop offset="100%" stop-color="#9333ea"/>
+          </linearGradient>
+          <linearGradient id="gradOrbit" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#38bdf8"/>
+            <stop offset="100%" stop-color="#2563eb"/>
+          </linearGradient>
+          <linearGradient id="gradElectron" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0ea5e9"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+          <path id="orbitBase"
+                d="M 200,150 m -80,0
+                   a 80,25 0 1,0 160,0
+                   a 80,25 0 1,0 -160,0"
+                fill="none" />
+        </defs>
+
+        <g>
+          <animateTransform attributeName="transform"
+                            type="rotate"
+                            from="0 200 150" to="360 200 150"
+                            dur="12s" repeatCount="indefinite"/>
+          <ellipse cx="200" cy="150" rx="80" ry="25" fill="none" stroke="url(#gradOrbit)" stroke-width="3"/>
+          <ellipse cx="200" cy="150" rx="80" ry="25" fill="none" stroke="url(#gradOrbit)" stroke-width="3" transform="rotate(-60 200 150)"/>
+          <ellipse cx="200" cy="150" rx="80" ry="25" fill="none" stroke="url(#gradOrbit)" stroke-width="3" transform="rotate(60 200 150)"/>
+          <g>
+            <circle r="6" fill="url(#gradElectron)">
+              <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#orbitBase" href="#orbitBase"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <g transform="rotate(-60 200 150)">
+            <circle r="6" fill="url(#gradElectron)">
+              <animateMotion dur="7.5s" begin="0.6s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#orbitBase" href="#orbitBase"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <g transform="rotate(60 200 150)">
+            <circle r="6" fill="url(#gradElectron)">
+              <animateMotion dur="9s" begin="1.2s" repeatCount="indefinite" rotate="auto">
+                <mpath xlink:href="#orbitBase" href="#orbitBase"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <circle cx="200" cy="150" r="8" fill="#1e3a8a"/>
+        </g>
+
+        <text x="200" y="120" text-anchor="middle"
+              font-family="Arial, sans-serif" font-size="18" font-weight="bold"
+              fill="url(#gradText)">grupo</text>
+        <text x="200" y="200" text-anchor="middle"
+              font-family="Arial, sans-serif" font-size="48" font-weight="bold" letter-spacing="2"
+              fill="url(#gradText)">CARVELE</text>
+      </svg>
+    </a>
+
+    <!-- CENTRO: LINKS -->
+    <div class="hidden md:flex justify-center">
+      <nav class="flex items-center gap-5 whitespace-nowrap">
+        <a href="#quienes" class="font-semibold hover:text-blue-800">Quiénes&nbsp;somos</a>
+        <a href="#servicios" class="font-semibold hover:text-blue-800">Servicios</a>
+        <a href="#sectores"  class="font-semibold hover:text-blue-800">Sectores</a>
+        <a href="#blog"      class="font-semibold hover:text-blue-800">Blog</a>
+        <a href="#contacto"  class="font-semibold hover:text-blue-800">Contacto</a>
+      </nav>
+    </div>
+
+    <!-- DER: REDES -->
+    <div class="flex items-center gap-4">
+      <a href="#" aria-label="Instagram">
+        <svg class="block h-6 w-6" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="ig" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FEDA77"/>
+              <stop offset="30%" stop-color="#F58529"/>
+              <stop offset="60%" stop-color="#DD2A7B"/>
+              <stop offset="100%" stop-color="#8134AF"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)"/>
+          <circle cx="12" cy="12" r="4" fill="#fff" opacity="0.9"/>
+          <circle cx="17.3" cy="6.7" r="1.1" fill="#fff" opacity="0.9"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg class="block h-6 w-6" viewBox="0 0 24 24" fill="#1877F2">
+          <path d="M22 12.06C22 6.49 17.52 2 11.94 2S2 6.49 2 12.06c0 4.99 3.66 9.13 8.44 9.94v-7.03H7.9v-2.9h2.54V9.84c0-2.5 1.49-3.87 3.77-3.87 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.81 8.44-4.95 8.44-9.94z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <svg class="block h-6 w-6" viewBox="0 0 24 24" fill="#0A66C2">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.05c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.77 2.65 4.77 6.1V24h-4v-6.7c0-1.6-.03-3.66-2.23-3.66-2.23 0-2.57 1.74-2.57 3.54V24h-4V8.5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative mt-24 h-[480px] bg-cover bg-center" style="background-image: url('imagenes/17653.jpg');">
+  <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+  <div class="relative max-w-7xl mx-auto h-full px-6 flex items-center">
+    <div class="max-w-2xl">
+      <h1 class="leading-none">
+        <span class="block">
+          <span class="inline-block pb-1 text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+            Tu Aliado en
+          </span>
+        </span>
+        <span class="block -mt-1">
+          <span class="inline-block pb-2.5 text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">
+            Regulación Sanitaria
+          </span>
+        </span>
+      </h1>
+
+      <p class="mt-4 text-base md:text-lg text-gray-600">
+        Más de 20 años transformando la complejidad normativa en el éxito de su empresa
+      </p>
+
+      <a href="#quienes"
+         class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-700 px-6 py-3 text-white font-semibold shadow-lg hover:bg-blue-800 transition">
+        Conócenos
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- QUIÉNES SOMOS -->
+<section id="quienes" class="py-20 max-w-7xl mx-auto px-4">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center text-blue-600 mb-12">
+    Quiénes somos
+  </h2>
+
+  <div class="grid gap-8 md:grid-cols-3">
+    <!-- Card 1 -->
+    <article class="group relative overflow-hidden rounded-2xl bg-white shadow ring-1 ring-gray-200 hover:shadow-xl transition">
+      <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-400 via-blue-600 to-indigo-600"></div>
+      <div class="p-8">
+        <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 ring-1 ring-blue-100">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round">
+  <rect x="6" y="3" width="12" height="15" rx="1.5" />
+  <line x1="8" y1="7" x2="16" y2="7" />
+  <line x1="8" y1="10" x2="16" y2="10" />
+  <line x1="8" y1="13" x2="14" y2="13" />
+</svg>
+
+        </div>
+        <h3 class="text-xl font-bold text-gray-900">Nuestra historia</h3>
+        <p class="mt-3 text-gray-600 leading-relaxed">
+          Dos décadas guiando a empresas en el laberinto regulatorio con soluciones claras y medibles.
+        </p>
+        <button type="button" onclick="openModal('modal-historia')"
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-white font-semibold shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+          Leer más
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="group relative overflow-hidden rounded-2xl bg-white shadow ring-1 ring-gray-200 hover:shadow-xl transition">
+      <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-teal-400 via-sky-500 to-blue-700"></div>
+      <div class="p-8">
+        <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600 ring-1 ring-teal-100">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none"
+          stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Diana -->
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="3" />
+          <circle cx="12" cy="12" r="1.3" fill="#0d9488" stroke="none"/>
+
+          <!-- Flecha -->
+          <line x1="17" y1="7" x2="12.8" y2="11.2" />
+          <path d="M17 7 L15.2 5 L20 4 Z" fill="#0d9488" stroke="none"/>
+          <path d="M17 7 L19 9 L21 5 Z" fill="#0d9488" stroke="none"/>
+        </svg>
+
+
+        </div>
+        <h3 class="text-xl font-bold text-gray-900">Misión, visión y valores</h3>
+        <p class="mt-3 text-gray-600 leading-relaxed">
+          Propósito claro, metas ambiciosas y una ética que prioriza la seguridad del paciente y la transparencia.
+        </p>
+        <button type="button" onclick="openModal('modal-mvv')"
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-white font-semibold shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+          Leer más
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="group relative overflow-hidden rounded-2xl bg-white shadow ring-1 ring-gray-200 hover:shadow-xl transition">
+      <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-400 via-blue-500 to-sky-600"></div>
+      <div class="p-8">
+        <div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="#4f46e5">
+            <!-- Persona superior -->
+            <circle cx="12" cy="5.5" r="2" />
+            <path d="M12 8.5q-2 1.2-2.7 3.5h5.4Q14 9.7 12 8.5Z" />
+
+            <!-- Persona inferior izquierda -->
+            <circle cx="7" cy="14" r="2" />
+            <path d="M7 17q-2 1.2-2.7 3.5h5.4Q9 18.2 7 17Z" />
+
+            <!-- Persona inferior derecha -->
+            <circle cx="17" cy="14" r="2" />
+            <path d="M17 17q-2 1.2-2.7 3.5h5.4Q19 18.2 17 17Z" />
+          </svg>
+
+        </div>
+        <h3 class="text-xl font-bold text-gray-900">Nuestro equipo</h3>
+        <p class="mt-3 text-gray-600 leading-relaxed">
+          Especialistas en asuntos regulatorios, clínicos y de calidad, coordinados para ejecutar de punta a punta.
+        </p>
+        <button type="button" onclick="openModal('modal-equipo')"
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-white font-semibold shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+          Leer más
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Modales -->
+<div id="modal-historia" class="modal hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal('modal-historia')"></div>
+  <div class="relative w-[min(900px,92vw)] max-h-[80vh]">
+    <div class="animated-border p-[3px] rounded-3xl shadow-2xl">
+      <div class="relative bg-white rounded-3xl overflow-auto max-h-[80vh]">
+        <header class="sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4 bg-white/90 backdrop-blur rounded-t-3xl">
+          <h3 class="text-xl font-bold text-blue-700">Historia de la empresa</h3>
+          <button onclick="closeModal('modal-historia')" class="p-2 rounded-md hover:bg-gray-100" aria-label="Cerrar">✖</button>
+        </header>
+        <div class="p-6 space-y-4 leading-relaxed text-gray-800">
+          <p>Fundada en 2002, Grupo <strong>Carvele</strong> nació de la necesidad de brindar asesoría especializada en el complejo panorama de la regulación sanitaria mexicana. Durante más de dos décadas, hemos acompañado el crecimiento de nuestros clientes, adaptando nuestros servicios a las demandas cambiantes del mercado y a las necesidades particulares de nuestros clientes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-mvv" class="modal hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal('modal-mvv')"></div>
+  <div class="relative w-[min(900px,92vw)] max-h-[80vh]">
+    <div class="animated-border p-[3px] rounded-3xl shadow-2xl">
+      <div class="relative bg-white rounded-3xl overflow-auto max-h-[80vh]">
+        <header class="sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4 bg-white/90 backdrop-blur rounded-t-3xl">
+          <h3 class="text-xl font-bold text-blue-700">Misión, visión y valores</h3>
+          <button onclick="closeModal('modal-mvv')" class="p-2 rounded-md hover:bg-gray-100" aria-label="Cerrar">✖</button>
+        </header>
+        <div class="p-6 space-y-5 leading-relaxed text-gray-800">
+          <section>
+            <h4 class="text-lg font-semibold">Misión</h4>
+            <p>Compartir nuestra experiencia y conocimientos con nuestros clientes, brindándoles una gama completa de servicios especializados en regulación sanitaria, que garanticen el cumplimiento normativo y la competitividad empresarial.</p>
+          </section>
+          <section>
+            <h4 class="text-lg font-semibold">Visión</h4>
+            <p>Consolidarnos como la empresa de referencia en México para servicios de regulación sanitaria y apoyo comercial, siendo reconocidos por nuestra capacidad de transformar desafíos normativos en oportunidades de crecimiento para nuestros clientes.</p>
+          </section>
+          <section>
+            <h4 class="text-lg font-semibold">Valores</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li><strong>Excelencia en el Servicio:</strong> Mejora continua en cada proceso y resultado.</li>
+              <li><strong>Integridad:</strong> Honestidad y ética profesional en todas nuestras relaciones.</li>
+              <li><strong>Orientación al Cliente:</strong> Las necesidades del cliente en el centro.</li>
+              <li><strong>Responsabilidad:</strong> Compromiso total con los resultados.</li>
+              <li><strong>Innovación:</strong> Adaptación constante a cambios normativos y de mercado.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-equipo" class="modal hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal('modal-equipo')"></div>
+  <div class="relative w-[min(900px,92vw)] max-h-[80vh]">
+    <div class="animated-border p-[3px] rounded-3xl shadow-2xl">
+      <div class="relative bg-white rounded-3xl overflow-auto max-h-[80vh]">
+        <header class="sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4 bg-white/90 backdrop-blur rounded-t-3xl">
+          <h3 class="text-xl font-bold text-blue-700">¿Quiénes somos y qué hacemos?</h3>
+          <button onclick="closeModal('modal-equipo')" class="p-2 rounded-md hover:bg-gray-100" aria-label="Cerrar">✖</button>
+        </header>
+        <div class="p-6 space-y-4 leading-relaxed text-gray-800">
+          <p>Grupo <strong>Carvele</strong> es su socio estratégico en regulación sanitaria mexicana. Desde 2002, transformamos la complejidad normativa en soluciones prácticas para empresas que fabrican, importan o comercializan productos relacionados con la salud. Nuestros servicios abarcan asesoría en el cumplimiento de normativas aplicables a: Suplementos Alimenticios, Cosméticos, Remedios Herbolarios, Medicamentos y Productos Higiénicos.</p>
+          <p>Apoyamos a nuestros clientes en cada etapa del proceso regulatorio, desde una adecuada clasificación de productos, hasta el acompañamiento en la obtención de avisos, permisos, registros, incluyendo el desarrollo de estrategias comerciales cumpliendo con el marco regulatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS (Swiper + Flip) -->
+<section id="servicios" class="py-10 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center text-blue-600 mb-6">Soluciones que Impulsan tu Crecimiento</h2>
+
+    <!-- CONTENEDOR SWIPER -->
+    <div class="swiper" id="servicesSwiper">
+      <div class="swiper-wrapper">
+
+
+        <!-- ========== 1. Establecimientos ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="establecimientos">
+              <div class="flip-inner w-full h-full">
+
+                <!-- Frente -->
+                <div class="flip-face service-border grad-establecimientos absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-indigo-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <path d="M3 11.5 12 4l9 7.5" />
+                      <path d="M5 10.8v8.2h14v-8.2" />
+                      <rect x="10" y="14" width="4" height="5" rx="0.8" />
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Establecimientos</span>
+                  </div>
+                </div>
+
+                <!-- Reverso -->
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Establecimientos</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Avisos y licencias</li>
+                    <li>Responsable sanitario</li>
+                    <li>Modificación o baja</li>
+                    <li>Licencia sanitaria</li>
+                    <li>Visita sanitaria</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ========== 2. Publicidad ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="publicidad">
+              <div class="flip-inner w-full h-full">
+
+                <div class="flip-face service-border grad-publicidad absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <path d="M3 10h4l9-4v12l-9-4H3z" />
+                      <path d="M7 14v2a2 2 0 0 0 2 2h2" />
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Publicidad</span>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Publicidad</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Avisos publicitarios</li>
+                    <li>Permisos (Modalidad A/B/C)</li>
+                    <li>Profesionales y especialidades</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ========== 3. Higiénicos & Dispositivos ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="higienicos">
+              <div class="flip-inner w-full h-full">
+
+                <div class="flip-face service-border grad-higienicos absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-rose-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <rect x="4" y="7.5" width="16" height="11" rx="2" />
+                      <path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5" />
+                      <path d="M12 11v4M10 13h4" />
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Higiénicos & Dispositivos</span>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Higiénicos & Dispositivos</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Registros sanitarios</li>
+                    <li>Permisos de importación</li>
+                    <li>Traducción técnica</li>
+                    <li>Certificados de Libre Venta</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ========== 4. Medicamentos ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="medicamentos">
+              <div class="flip-inner w-full h-full">
+
+                <div class="flip-face service-border grad-medicamentos absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-blue-600 mx-auto"
+                        fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24">
+
+                      <!-- Cápsula inclinada -->
+                      <g transform="rotate(-30 12 12)">
+
+                        <!-- Mitad superior -->
+                        <path d="M9 6a3.5 3.5 0 0 1 7 0v5.5H9V6z" />
+
+                        <!-- Mitad inferior -->
+                        <path d="M9 11.5h7V17a3.5 3.5 0 0 1-7 0v-5.5z" />
+
+                        <!-- Línea divisoria -->
+                        <line x1="9" y1="11.5" x2="16" y2="11.5" />
+                      </g>
+
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Medicamentos</span>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Medicamentos</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Registros sanitarios</li>
+                    <li>Permisos de importación</li>
+                    <li>Modificaciones al registro</li>
+                    <li>Traducción técnica</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ========== 5. Suplementos & Alimentos ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="suplementos">
+              <div class="flip-inner w-full h-full">
+
+                <div class="flip-face service-border grad-suplementos absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <path d="M12 7c-2.8-2.6-5.8-1.9-7 0 0 4 2 9 7 9s7-5 7-9c-1.2-1.9-4.2-2.6-7 0z" />
+                      <path d="M13.3 5.2c.4-1.6 1.5-2.4 3.3-2.4" />
+                      <path d="M12 5s-.2-2 2-3" />
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Suplementos & Alimentos</span>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Suplementos & Alimentos</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Permisos previos</li>
+                    <li>Modificaciones y prórrogas</li>
+                    <li>Altas de productos</li>
+                    <li>Etiquetado NOM-051</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- ========== 6. Cosméticos & Aseo ========== -->
+        <div class="swiper-slide">
+          <div class="service-item min-w-[12rem]">
+            <button class="service-pill flip-card w-48 h-56 mx-auto block rounded-2xl" data-id="cosmeticos">
+              <div class="flip-inner w-full h-full">
+
+                <div class="flip-face service-border grad-cosmeticos absolute inset-0 grid place-items-center rounded-2xl bg-white
+            shadow hover:shadow-md transition p-5">
+                  <div class="flex flex-col items-center gap-3">
+                    <svg class="h-12 w-12 text-fuchsia-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <rect x="9" y="3" width="6" height="3" rx="0.6" />
+                      <rect x="8" y="6" width="8" height="12" rx="2" />
+                      <path d="M9 8h6" />
+                      <path d="M19.5 8.5h1.5M18.2 6.8l1.1-1.1M18.2 10.2l1.1 1.1" />
+                    </svg>
+                    <span class="font-semibold text-gray-900 text-center leading-tight">Cosméticos & Aseo</span>
+                  </div>
+                </div>
+
+                <div class="flip-face flip-back absolute inset-0 rounded-2xl bg-white border border-blue-100 shadow p-4">
+                  <h4 class="font-semibold text-blue-700 text-center mb-2">Cosméticos & Aseo</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                    <li>Revisión de formulaciones</li>
+                    <li>Viabilidad de uso</li>
+                    <li>Altas / modificaciones</li>
+                    <li>Etiquetado</li>
+                  </ul>
+                </div>
+
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+      </div> <!-- swiper-wrapper -->
+    </div> <!-- swiper -->
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores" class="relative pt-16 pb-0 bg-gradient-to-b from-blue-700 to-blue-900 text-white overflow-hidden">
+
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 
+              bg-gradient-to-b from-transparent to-blue-900"></div>
+
+  <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+      La solución para todas las empresas en un mismo lugar
+    </h2>
+
+    <p class="text-blue-100 max-w-3xl mx-auto text-lg mb-6">
+      Servicios especializados para industrias clave, adaptados a las necesidades de cada empresa.
+    </p>
+
+    <div class="relative h-[40rem] z-20"> 
+
+      <div class="absolute bottom-0 inset-x-0 mx-auto w-[26rem] z-30"> 
+
+  <!-- Tarjeta con imagen -->
+  <div class="relative h-[32rem] rounded-t-3xl rounded-b-none shadow-xl overflow-hidden">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-cover bg-center"
+         style="background-image: url('imagenes/sector1.jpg');">
+    </div>
+
+    <!-- Overlay para legibilidad -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Texto -->
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white font-semibold text-xl md:text-2xl text-center px-6 drop-shadow-md">
+        Industria farmacéutica
+      </p>
+    </div>
+
+  </div>
+</div>
+
+      <div class="absolute bottom-0 inset-x-0 mx-auto w-[24rem] z-20 transform -translate-x-[20rem]">
+
+  <!-- Tarjeta con imagen -->
+  <div class="relative h-[28rem] rounded-t-3xl rounded-b-none shadow-xl overflow-hidden">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-cover bg-center"
+         style="background-image: url('imagenes/sector3.jpg');">
+    </div>
+
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Texto centrado -->
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white font-semibold text-lg md:text-xl text-center px-4 drop-shadow">
+        Productos naturales
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+     <div class="absolute bottom-0 inset-x-0 mx-auto w-[24rem] z-20 transform translate-x-[20rem]">
+
+  <!-- Tarjeta con imagen -->
+  <div class="relative h-[28rem] rounded-t-3xl rounded-b-none shadow-xl overflow-hidden">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-cover bg-center"
+         style="background-image: url('imagenes/sector2.jpg');">
+    </div>
+
+    <!-- Overlay oscuro para legibilidad -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Texto centrado -->
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white font-semibold text-lg md:text-xl text-center px-4 drop-shadow">
+        Suplementos y nutrición
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+      <div class="absolute bottom-0 inset-x-0 mx-auto w-[22rem] z-10 transform -translate-x-[40rem]">
+
+  <!-- Tarjeta con imagen -->
+  <div class="relative h-[24rem] rounded-t-3xl rounded-b-none shadow-xl overflow-hidden">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-cover bg-center"
+         style="background-image: url('imagenes/sector4.jpg');">
+    </div>
+
+    <!-- Overlay oscuro para legibilidad -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Texto centrado -->
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white font-semibold text-sm md:text-base text-center px-4 drop-shadow">
+        Productos higiénicos y sanitarios
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+      <div class="absolute bottom-0 inset-x-0 mx-auto w-[22rem] z-10 transform translate-x-[40rem]">
+
+  <!-- Tarjeta con imagen -->
+  <div class="relative h-[24rem] rounded-t-3xl rounded-b-none shadow-xl overflow-hidden">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-cover bg-center"
+         style="background-image: url('imagenes/sector5.jpg');">
+    </div>
+
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Texto centrado (ligeramente más pequeño) -->
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white font-semibold text-sm md:text-base text-center px-4 drop-shadow">
+        Cosmética y cuidado personal
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO MODERNO -->
+<section id="contacto" 
+  class="relative py-24 px-6 bg-gradient-to-br from-blue-900 via-indigo-900 to-blue-700 text-white overflow-hidden">
+
+  <!-- Patrón decorativo -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <svg width="100%" height="100%">
+      <defs>
+        <pattern id="dots-pattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="2" fill="white"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#dots-pattern)" />
+    </svg>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center z-10">
+
+    <!-- IZQUIERDA: TÍTULO -->
+    <div>
+      <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        Ponte en<br>contacto.
+      </h2>
+      <p class="text-blue-100 text-lg max-w-md">
+        Estamos listos para ayudarte a navegar el mundo de la regulación sanitaria.
+      </p>
+    </div>
+
+    <!-- DERECHA: INFORMACIÓN -->
+    <div class="space-y-10">
+
+      <!-- Dirección -->
+      <div>
+        <p class="flex items-center gap-3 text-xl font-semibold">
+          <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+          Dirección
+        </p>
+        <p class="ml-9 text-blue-100">
+          Privada Baltar 26, Villas del Real, Tecámac, Estado de México
+        </p>
+      </div>
+
+      <!-- Teléfono -->
+      <div>
+        <p class="flex items-center gap-3 text-xl font-semibold">
+          <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.86 12.86 0 0 0 .7 2.83 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 7.22 7.22l1.27-1.27a2 2 0 0 1 2.11-.45 12.86 12.86 0 0 0 2.83.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Teléfono
+        </p>
+        <p class="ml-9 text-blue-100">
+          +56 4095 8921
+        </p>
+      </div>
+
+      <!-- Correo -->
+      <div>
+        <p class="flex items-center gap-3 text-xl font-semibold">
+          <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z" />
+            <path d="M4 4l8 8 8-8" />
+          </svg>
+          Correo
+        </p>
+        <p class="ml-9 text-blue-100">
+          cg-contacto@grupocarvele.com
+        </p>
+      </div>
+
+      <!-- Redes sociales -->
+      <div>
+        <p class="flex items-center gap-3 text-xl font-semibold">
+          <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M4 12h16M12 4v16" />
+          </svg>
+          Síguenos
+        </p>
+
+        <div class="flex gap-4 ml-9 mt-2 text-white">
+          <a href="#" class="hover:text-sky-300 transition"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+          <a href="#" class="hover:text-sky-300 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+          <a href="#" class="hover:text-sky-300 transition"><i class="fa-brands fa-instagram text-2xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-blue-600 text-white text-center py-6">
+  <p>&copy; 2025 Consultoría en Regulación Sanitaria - Todos los derechos reservados</p>
+</footer>
+
+<!-- Tiny Slider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!-- Tu JS -->
+<script src="Pagina.js" defer></script>
+</body>
+</html>

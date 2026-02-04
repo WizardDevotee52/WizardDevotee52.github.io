@@ -1,0 +1,107 @@
+/* Global */
+html { scroll-behavior: smooth; }
+
+/* NAVBAR / LOGO */
+.logo { width: 100%; height: auto; }
+.navbar-logo { width: 220px; height: 150px; } /* desktop */
+@media (max-width: 1024px) { .navbar-logo { width: 180px; height: 120px; } }
+@media (max-width: 768px)  { .navbar-logo { width: 150px; height: 100px; } }
+@media (max-width: 640px)  { .navbar-logo { width: 130px; height: 90px; } }
+
+/* Órbita del logo */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 12s linear infinite; transform-origin: 200px 150px; }
+
+/* Modales (borde animado) */
+@keyframes border-pan {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+.animated-border {
+  background: linear-gradient(90deg,#38bdf8,#2563eb,#9333ea,#38bdf8);
+  background-size: 300% 300%;
+  animation: border-pan 8s linear infinite;
+}
+
+/* Flip-cards dentro de #servicios */
+#servicios .flip-card  { perspective: 1000px; }
+#servicios .flip-inner { transform-style: preserve-3d; transition: transform .6s; }
+#servicios .flip-face  { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+#servicios .flip-back  { transform: rotateY(180deg); }
+#servicios .flipped    { transform: rotateY(180deg); }
+
+/* ======= SWIPER FIX: permitir animación ======= */
+
+#servicesSwiper .swiper-wrapper {
+  display: flex !important;
+  will-change: transform;
+}
+
+#servicesSwiper .swiper-slide {
+  width: auto !important;
+  flex-shrink: 0 !important;
+}
+
+/* Fades reales usando máscaras (sin bordes duros) */
+#servicesSwiper {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+          mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+}
+
+/* ===== BORDES DEGRADADOS PARA SERVICIOS ===== */
+
+.service-border {
+  position: relative;
+  border-radius: 1rem; /* conserva tu rounded-2xl */
+}
+
+/* Crea un borde mediante un pseudo-elemento */
+.service-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;               /* grosor del borde */
+  border-radius: inherit;
+  background: var(--grad);
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* —— GRADIENTES POR TARJETA —— */
+
+/* Establecimientos: azul → índigo */
+.grad-establecimientos { --grad: linear-gradient(90deg, #38bdf8, #2563eb, #9333ea); }
+
+/* Publicidad: naranja → dorado */
+.grad-publicidad { --grad: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+/* Higiénicos & dispositivos: rosa → rojo */
+.grad-higienicos { --grad: linear-gradient(90deg, #fb7185, #e11d48); }
+
+/* Medicamentos: azul puro */
+.grad-medicamentos { --grad: linear-gradient(90deg, #2563eb, #3b82f6); }
+
+/* Suplementos & Alimentos: verde esmeralda */
+.grad-suplementos { --grad: linear-gradient(90deg, #34d399, #10b981); }
+
+/* Cosméticos: fucsia → púrpura */
+.grad-cosmeticos { --grad: linear-gradient(90deg, #ec4899, #a855f7); }
+
+
